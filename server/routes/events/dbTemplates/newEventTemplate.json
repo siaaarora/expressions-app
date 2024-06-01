@@ -1,0 +1,17 @@
+{
+    "title": "",
+    "description": "",
+    "category": "",
+    "location": "",
+    "images": [],
+    "eventStartDatetime": null,
+    "eventEndDatetime": null,
+    "capacity": null,
+    "usersInterested": [],
+    "visibility": "",
+    "ageRequirement": 0,
+    "belongsToOrg": null,
+    "createdBy": null,
+    "createdDatetime": null,
+    "comments": []
+}

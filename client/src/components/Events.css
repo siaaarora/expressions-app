@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+.calendar-container {
+    font-family: 'Calistoga', sans-serif;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .calendar-nav button {
+    margin-left: 10px;
+  }
+  
+  .month-navigation button {
+    border-radius: 50%;
+    border: 1px solid #5E5E5E;
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  
+  .days-of-week {
+    display: flex;
+    background-color: #FCFFDA;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .week-day {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: #5E5E5E;
+  }
+  
+  .days-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .week-row {
+    display: flex;
+    flex-basis: 100%;
+  }
+
+  .day-number {
+    color: #5E5E5E;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  .day-cell {
+    flex-grow: 1;
+    flex-basis: calc(100% / 7.5 - 1px);
+    border: 1px solid #ddd;
+    min-height: 115px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .day-cell::before {
+    content: attr(data-day);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+  }
+
+  .current-day { 
+    -webkit-box-shadow: 0 0 1px 3px green inset;
+    box-shadow: 0 0 1px 3px green inset;
+  }
+  
+  .event {
+    display: block;
+    margin: 5px 5px 0 5px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .event:hover {
+    cursor: pointer;
+  }
+  
+  .event.Academic {
+    background-color: #B3FF8F;
+  }
+
+  .event.Academic:hover {
+    background-color: #74ff34;
+  }
+  
+  .event.Social {
+    background-color: #FF7C7C;
+  }
+
+  .event.Social:hover {
+    background-color: #ff4e4e;
+  }
+  
+  .event.Other {
+    background-color: #8FDEFF;
+  }
+
+  .event.Other:hover {
+    background-color: #45c7ff;
+  }
+
+  .days-grid a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Calistoga', sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    .day-cell {
+      flex-basis: calc(100% / 7);
+    }
+  }
+  
+.new-event-indicator {
+    margin-right: 5px;
+    color: red;
+}
+
+.options-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.view-mode-toggle {
+  display: flex;
+  justify-content: right;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  border: 1px solid #d1d1d1;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button.active {
+  background-color: #3085d6;
+  color: white;
+  border-color: #3085d6;
+}
+
+.toggle-button:not(:last-child) {
+  border-right: none;
+}
+
+.toggle-button:hover {
+  background-color: #2672b8;
+  color: white;
+}
+
+.events-container {
+  text-align: center;
+}
+
+.filter {
+  display: flex;
+}
+
+.filter-text {
+  transform: translateY(6px);
+  margin-right: 5px;
+}
+
+.filterTerms {
+  border: 3px solid #3182ce;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.filterButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #3182ce;
+  background: #3182ce;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.no-orgs-text{
+  margin-top: 20px;
+}
+
+.pastEvent {
+  position: relative;
+}
+
+.pastEvent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.hide-past-events {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  margin-left: 3px;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: .2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}

@@ -1,0 +1,117 @@
+.org-card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.org-card-container:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+  
+.org-banner {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+  
+.org-content {
+    padding: 16px;
+}
+  
+.org-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+  
+.org-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+  
+.org-name {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+  
+.org-shorthand {
+    font-size: 0.875rem;
+    color: #666;
+    margin-left: 5px;
+}
+  
+.org-bio {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+  
+.org-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #666;
+}
+  
+.org-last-active {
+    font-style: italic;
+}
+  
+.org-followers-count {
+    font-weight: bold;
+}
+
+.bio-rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.average-container-card {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+.average-container-card span {
+    font-weight: bold;
+}
+
+.average-container-card .star {
+    height: 16px;
+    width: 16px;
+}
+
+.partialStarCard {
+    display: inline-block;
+    position: relative;
+    height: 16px;
+    width: 16px;
+    z-index: 0;
+  }
+  
+.partialStarCard:before {
+    font-size: 20px;
+    content: "★";
+    position: absolute;
+    margin-top: -7px;
+    left: 0;
+    top: 0;
+    width: var(--rating);
+    overflow: hidden;
+    color: rgb(255, 179, 14);
+    z-index: -1;
+}

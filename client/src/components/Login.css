@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+.login-container {
+  font-family: 'Calistoga', sans-serif;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 20px;
+  border: 2px solid #E7E7E7;
+  border-radius: 8px;
+  position: relative;
+}
+
+.login-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 97%;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-buttons-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.login-container .sign-up-button {
+  padding: 10px;
+  font-family: 'Calistoga', sans-serif;
+  background-color: #f05656;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.login-container .sign-up-button:hover {
+  background-color: #d84c4c;
+}
+
+.login-container .login-button {
+  padding: 10px;
+  font-family: 'Calistoga', sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container .login-button:hover {
+  background-color: #45a049;
+}
+
+.login-password-container {
+  border-bottom: 2px solid #E7E7E7;
+}
+
+.google-button {
+  padding: 10px;
+  font-family: 'Calistoga', sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.google-button:hover {
+  background-color: #45a049;
+}
+
+.login-container a {
+  font-size: 12px;
+  margin: 0;
+  margin-top: -20px;
+}

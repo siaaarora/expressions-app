@@ -1,0 +1,21 @@
+{    
+    "login": {
+        "email": "",
+        "password": "",
+        "googleId": "",
+        "isAsuEmail": false
+    },
+    "name": "",
+    "bio": "",
+    "age": null,
+    "emailNotifs": {
+        "newEventByOrg": true,
+        "newPostForEvent": true,
+        "upcomingEvents": true
+    },
+    "createdDatetime": null,
+    "followingOrgs": [],
+    "interestedEventHistory": [],
+    "hostedEvents": [],
+    "posts": []
+}

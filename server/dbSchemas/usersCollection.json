@@ -1,0 +1,191 @@
+{
+    "title": "usersSchema",
+    "additionalProperties": false,
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "login": {
+            "bsonType": "object",
+            "properties": {
+                "email": {
+                    "bsonType": "string",
+                    "pattern": "^[a-z0-9_]+@[a-z0-9]+.[a-z]+$"
+                },
+                "password": {
+                    "bsonType": "string",
+                    "minLength": 6
+                },
+                "googleId": {
+                    "bsonType": "string"
+                },
+                "isAsuEmail": {
+                    "bsonType": "bool"
+                }
+            },
+            "required": [
+                "email",
+                "password",
+                "googleId",
+                "isAsuEmail"
+            ]
+        },
+        "name": {
+            "bsonType": "string"
+        },
+        "bio": {
+            "bsonType": "string"
+        },
+        "age": {
+            "bsonType": "int"
+        },
+        "emailNotifs": {
+            "bsonType": "object",
+            "properties": {
+                "newEventByOrg": {
+                    "bsonType": "bool"
+                },
+                "newPostForEvent": {
+                    "bsonType": "bool"
+                },
+                "upcomingEvents": {
+                    "bsonType": "bool"
+                }
+            },
+            "required": [
+                "newEventByOrg",
+                "newPostForEvent",
+                "upcomingEvents"
+            ]
+        },
+        "createdDatetime": {
+            "bsonType": "date"
+        },
+        "followingOrgs": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "interestedEventHistory": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "hostedEvents": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "posts": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "postId": {
+                        "bsonType": "objectId"
+                    },
+                    "title": {
+                        "bsonType": "string"
+                    },
+                    "content": {
+                        "bsonType": "string"
+                    },
+                    "image": {
+                        "bsonType": "string"
+                    },
+                    "eventId": {
+                        "bsonType" : "objectId"
+                    },
+                    "postedDatetime": {
+                        "bsonType": "date"
+                    },
+                    "likedBy": {
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "objectId"
+                        }
+                    },
+                    "replies": {
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "object",
+                            "properties": {
+                                "replyId": {
+                                    "bsonType": "objectId"
+                                },
+                                "content": {
+                                    "bsonType": "string"
+                                },
+                                "authorId": {
+                                    "bsonType": "objectId"
+                                },
+                                "postedDatetime": {
+                                    "bsonType": "date"
+                                },
+                                "replies": {
+                                    "bsonType": "array",
+                                    "items": {
+                                        "bsonType": "object",
+                                        "properties": {
+                                            "replyId": {
+                                                "bsonType": "objectId"
+                                            },
+                                            "content": {
+                                                "bsonType": "string"
+                                            },
+                                            "authorId": {
+                                                "bsonType": "objectId"
+                                            },
+                                            "postedDatetime": {
+                                                "bsonType": "date"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "replyId",
+                                        "content",
+                                        "authorId",
+                                        "postedDatetime"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "replyId",
+                                "content",
+                                "authorId",
+                                "postedDatetime",
+                                "replies"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "postId",
+                    "title",
+                    "content",
+                    "eventId",
+                    "postedDatetime",
+                    "likedBy",
+                    "replies"
+                ]
+            }
+        }
+    },
+    "required": [
+        "_id",
+        "login",
+        "name",
+        "bio",
+        "age",
+        "emailNotifs",
+        "createdDatetime",
+        "followingOrgs",
+        "interestedEventHistory",
+        "hostedEvents",
+        "posts"
+    ]
+}

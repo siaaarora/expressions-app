@@ -1,0 +1,111 @@
+{
+    "title": "orgsSchema",
+    "additionalProperties": false,
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "name": {
+            "bsonType": "string"
+        },
+        "shorthand": {
+            "bsonType": "string"
+        },
+        "orgImg": {
+            "bsonType": "string"
+        },
+        "bannerImg": {
+            "bsonType": "string"
+        },
+        "bio": {
+            "bsonType": "string"
+        },
+        "contactInfo": {
+            "bsonType": "object",
+            "properties": {
+                "email": {
+                    "bsonType": "string",
+                    "pattern": "^[a-z0-9_]+@[a-z0-9]+.[a-z]+$"
+                },
+                "twitter": {
+                    "bsonType": "string"
+                },
+                "discord": {
+                    "bsonType": "string"
+                },
+                "phoneNumber": {
+                    "bsonType": "string"
+                }
+            },
+            "required": [
+                "email",
+                "twitter",
+                "discord",
+                "phoneNumber"
+            ]
+        },
+        "ratings": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "ratedBy": {
+                        "bsonType": "objectId"
+                    },
+                    "value": {
+                        "bsonType": "number",
+                        "multipleOf": 0.1
+                    }
+                },
+                "required": [
+                    "ratedBy",
+                    "value"
+                ]
+            }
+        },
+        "owner": {
+            "bsonType": "objectId"
+        },
+        "contributors": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "lastActive": {
+            "bsonType": "date"
+        },
+        "followers": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "events": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "objectId"
+            }
+        },
+        "dateCreated": {
+            "bsonType": "date"
+        }
+    },
+    "required": [
+        "_id",
+        "name",
+        "shorthand",
+        "orgImg",
+        "bannerImg",
+        "bio",
+        "contactInfo",
+        "ratings",
+        "owner",
+        "contributors",
+        "lastActive",
+        "followers",
+        "events",
+        "dateCreated"
+    ]
+}

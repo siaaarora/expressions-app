@@ -1,0 +1,52 @@
+.event-analytics-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+  
+.event-analytics-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+.event-analytics-details {
+    font-size: 1rem;
+    color: #666;
+}
+  
+.analytics-detail-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.analytics-detail-label {
+    font-weight: 600;
+    color: #333;
+}
+  
+.analytics-detail-value {
+    font-weight: 400;
+}
+  
+.event-analytics-container {
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+  
+.event-analytics-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+  
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+  body {
+    font-family: 'Open+Sans', sans-serif;
+}
+  

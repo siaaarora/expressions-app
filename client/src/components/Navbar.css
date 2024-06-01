@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+.nav a {
+    text-decoration: none;
+    color: #303030;
+    font-family: 'Calistoga', sans-serif;
+}
+
+.nav a:hover {
+  color: #FFDB5A;
+}
+  
+nav {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Calistoga', sans-serif;
+    display: flex;
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 15px;
+    color: #FFDB5A;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #FFDB5A;
+}
+  
+    nav p {
+      font-weight: 500;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-right: 2rem;
+    }
+    
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+    
+    nav ul li a {
+      color: #FFDB5A;
+      text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+      color: #D7A700;
+    }
+    
+    nav span {
+      color: #FFDB5A;
+    }
+  
+    .nav-buttons {
+      display: flex;
+    }
+  
+  .login {
+    font-family: 'Calistoga', sans-serif;
+    border: #303030 1px solid;
+    background-color: white;
+    border-radius: 6px;
+    color: #303030;
+    font-size: 22px;
+    width: 100px;
+  }
+  
+  .login:hover {
+    background-color: white;
+    border: #D7A700 1px solid;
+    color: #D7A700;
+    cursor: pointer;
+  }

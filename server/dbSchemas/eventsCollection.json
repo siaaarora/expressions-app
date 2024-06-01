@@ -1,0 +1,168 @@
+{
+    "title": "eventsSchema",
+    "additionalProperties": false,
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "title": {
+            "bsonType": "string"
+        },
+        "description": {
+            "bsonType": "string"
+        },
+        "category": {
+            "bsonType": "string",
+            "enum": [
+                "Social",
+                "Academic",
+                "Other"
+            ]
+        },
+        "location": {
+            "bsonType": "string"
+        },
+        "images": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "string"
+            }
+        },
+        "eventStartDatetime": {
+            "bsonType": "date"
+        },
+        "eventEndDatetime": {
+            "bsonType": "date"
+        },
+        "capacity": {
+            "bsonType": ["int", "null"]
+        },
+        "usersInterested": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "userId": {
+                        "bsonType": "objectId"
+                    },
+                    "name": {
+                        "bsonType": "string"
+                    }
+                },
+                "required": [
+                    "userId",
+                    "name"
+                ]
+            }
+        },
+        "visibility": {
+            "bsonType": "string",
+            "enum": [
+                "Public",
+                "Private"
+            ]
+        },
+        "ageRequirement": {
+            "bsonType": "int"
+        },
+        "belongsToOrg": {
+            "bsonType": "objectId"
+        },
+        "createdBy": {
+            "bsonType": "objectId"
+        },        
+        "createdDatetime": {
+            "bsonType": "date"
+        },
+        "comments": {
+            "bsonType": "array",
+            "items": {
+                "bsonType": "object",
+                "properties": {
+                    "commentId": {
+                        "bsonType": "objectId"
+                    },
+                    "content": {
+                        "bsonType": "string"
+                    },
+                    "authorId": {
+                        "bsonType": "objectId"
+                    },
+                    "postedDatetime": {
+                        "bsonType": "date"
+                    },
+                    "likedBy": {
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "objectId"
+                        }
+                    },
+                    "replies": {
+                        "bsonType": "array",
+                        "items": {
+                            "bsonType": "object",
+                            "properties": {
+                                "replyId": {
+                                    "bsonType": "objectId"
+                                },
+                                "content": {
+                                    "bsonType": "string"
+                                },
+                                "authorId": {
+                                    "bsonType": "objectId"
+                                },
+                                "replyingToUserId": {
+                                    "bsonType": "objectId"
+                                },
+                                "postedDatetime": {
+                                    "bsonType": "date"
+                                },
+                                "likedBy": {
+                                    "bsonType": "array",
+                                    "items": {
+                                        "bsonType": "objectId"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "replyId",
+                                "content",
+                                "authorId",
+                                "replyingToUserId",
+                                "postedDatetime",
+                                "likedBy"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "commentId",
+                    "content",
+                    "authorId",
+                    "postedDatetime",
+                    "likedBy",
+                    "replies"
+                ]
+            }
+        }
+    },
+    "required": [
+        "_id",
+        "title",
+        "description",
+        "category",
+        "location",
+        "images",
+        "eventStartDatetime",
+        "eventEndDatetime",
+        "capacity",
+        "usersInterested",
+        "visibility",
+        "ageRequirement",
+        "belongsToOrg",
+        "createdBy",
+        "createdDatetime",
+        "comments"
+    ]
+}

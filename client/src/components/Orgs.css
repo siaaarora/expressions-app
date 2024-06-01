@@ -1,0 +1,25 @@
+.orgs-outer-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.orgs-inner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+  
+@media (max-width: 768px) {
+    .orgs-inner-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media (max-width: 480px) {
+    .orgs-inner-container {
+      grid-template-columns: 1fr;
+    }
+}
+  

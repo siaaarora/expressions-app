@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "devStart": "nodemon server.js",
+    "upSchema": "node ./dbSchemas/updateSchema.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "md5": "^2.3.0",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.2",
+    "mongoose-findorcreate": "^4.0.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.9",
+    "nodemon": "^3.0.3",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
+  }
+}
